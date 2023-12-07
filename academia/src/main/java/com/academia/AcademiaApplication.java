@@ -8,7 +8,7 @@ public class AcademiaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AcademiaApplication.class, args);
-		System.out.print("hola mundo ");
+		System.out.print("hola mundo :-) ");
 	}  
 
 }
