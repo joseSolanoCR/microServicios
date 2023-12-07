@@ -42,14 +42,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/curso/4188",
+							"raw": "localhost:8080/cursos/3706",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"curso",
-								"4188"
+								"cursos",
+								"3706"
 							]
 						}
 					},
@@ -61,14 +61,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/curso/4188",
+							"raw": "localhost:8080/curso/3706",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"curso",
-								"4188"
+								"3706"
 							]
 						}
 					},
@@ -114,8 +114,163 @@
 				{
 					"name": "actualizarCurso",
 					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 3706,\r\n        \"nombre\": \"Pedro\",\r\n        \"descripcion\": \"Cambio 4\",\r\n        \"tiempo\": \"2 meses\",\r\n        \"usuario\": \"Edwin Ceron\"\r\n    },",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cursos/3706",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cursos",
+								"3706"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Grupos",
+			"item": [
+				{
+					"name": "guardarCurso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"nombre\":\"Cerdas Guapo!!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/grupos",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"grupos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/grupos/2046",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"grupos",
+								"2046"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/grupo/1708",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"grupo",
+								"1708"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarGrupos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/grupos",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"grupos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/gruposByName/JPSC",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"gruposByName",
+								"JPSC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarGrupo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"nombre\": \"JPSC\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/grupos/1708",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"grupos",
+								"1708"
+							]
+						}
 					},
 					"response": []
 				}
@@ -139,11 +294,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/estudiantes",
+							"raw": "localhost:8081/estudiantes",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
 								"estudiantes"
 							]
@@ -157,11 +312,11 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/estudiante/1386",
+							"raw": "localhost:8081/estudiante/1386",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
 								"estudiante",
 								"1386"
@@ -176,11 +331,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/estudiante/1386",
+							"raw": "localhost:8081/estudiante/1386",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
 								"estudiante",
 								"1386"
@@ -195,11 +350,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/estudiantes",
+							"raw": "localhost:8081/estudiantes",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
 								"estudiantes"
 							]
@@ -213,14 +368,177 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/estudianteByCedula/123",
+							"raw": "localhost:8081/estudianteByCedula/123",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
 								"estudianteByCedula",
 								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarEstudiante",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"nombre\": \"JPSC\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/estudiante/1708",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"estudiante",
+								"1708"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profesor",
+			"item": [
+				{
+					"name": "guardarProfesor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"cedula\":\"110560175\",\r\n\"correoelectronico\":\"jsolanoca@gmail.com\",\r\n\"telefono\":\"87022466\",\r\n\"telefonocelular\":\"88769999\",\r\n\"fechanacimiento\":\"2022-08-01T00:00:00.0000\",\r\n\"sexo\":\"M\",\r\n\"direccion\":\"Paraiso\",\r\n\"nombre\":\"JP\",\r\n\"apellidopaterno\":\"Solano\",\r\n\"apellidomaterno\":\"Calderon\",\r\n\"nacionalidad\":\"CR\",\r\n\"usuario\":\"JP\",\r\n\"idcarreras\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/profesor",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"profesor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/profesor/1235206",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"profesor",
+								"1235206"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/profesor/1235206",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"profesor",
+								"1235206"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarProfesores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/profesor",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"profesor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByNombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/profesorByName/arkin",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"profesorByName",
+								"arkin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarProfesor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"nombre\": \"JPSC\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/profesor/1235026",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"profesor",
+								"1235026"
 							]
 						}
 					},
