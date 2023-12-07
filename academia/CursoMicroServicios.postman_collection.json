@@ -286,7 +286,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"nombre\":\"JP se la eat!\"\r\n}",
+							"raw": "{\r\n\"nombre\":\"JP se la eat!\",\r\n\"email\":\"jp@selacome.com\",\r\n\"password\":\"mypass\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
