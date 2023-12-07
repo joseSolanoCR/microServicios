@@ -277,6 +277,141 @@
 			]
 		},
 		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "guardarusuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"nombre\":\"JP se la eat!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/usuarios/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/usuario/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/gruposByName/JPSC",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"gruposByName",
+								"JPSC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"nombre\": \"JPSC\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/usuario/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Estudiante",
 			"item": [
 				{
