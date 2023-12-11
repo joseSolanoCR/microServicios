@@ -20,8 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.academia.modelo.Curso;
 import com.academia.servicio.CursoServicio;
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+
 
 @RestController
 public class CursoControlador {
@@ -29,8 +28,6 @@ public class CursoControlador {
 	@Autowired
 	private CursoServicio servicio;
 	
-	@Autowired
-	private SecretKey secretKey;
 	
 	@GetMapping("/cursos")
 	public List<Curso> listarCurso(){
@@ -60,10 +57,6 @@ public class CursoControlador {
 		try {
 			 Curso cursoGuardado = servicio.guardarCurso(datosCurso);
 			 Integer idnuevo = cursoGuardado.getId();
-			 String token = Jwts.builder()
-					 .setSubject(cursoGuardado.getUsuario())
-					 .signWith(secretKey, SignatureAlgorithm.HS256)
-					 .compact();
 			 return new ResponseEntity<>("El curso fue almacenado " + idnuevo, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<String>("Error al crear curso " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
